@@ -1,0 +1,76 @@
+import { ButtonHTMLAttributes, CSSProperties, ReactNode } from "react";
+import styles from "./button.module.css";
+type ButtonSize = "small" | "medium" | "large" ;
+type ButtonVariant = "primary" | "secondary" | 'dot' | "outline" | "ghost" | "danger";
+type ButtonType = {
+  size?: ButtonSize;
+  variant?: ButtonVariant;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  children?: React.ReactNode;
+  fullWidth?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  className?: string;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const Button = ({
+  size = "medium",
+  variant = "primary",
+  startIcon,
+  endIcon,
+  children,
+  fullWidth = false,
+  onClick,
+  className = "",
+  disabled = false,
+  type = "button",
+  color,
+  ...props
+}: ButtonType) => {
+
+  const buttonClasses = [
+    styles.button,
+    styles[size],
+    styles[variant],
+    fullWidth && styles.fullWidth,
+    disabled && styles.disabled,
+    color && styles.customColor,
+    className,
+  ].filter(Boolean).join(' ');
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (disabled) {
+      event.preventDefault();
+      return;
+    }
+    // обработчик
+    if (onClick) {
+      onClick(event);
+    }
+  };
+    
+  const customStyle: CSSProperties = {};
+  
+  if (color) {
+    customStyle.backgroundColor = color;
+    customStyle.borderColor = "black";
+  }
+  return (
+    <button
+      type={type}
+      className={buttonClasses}
+      onClick={handleClick}
+      disabled={disabled}
+      style={customStyle}
+      {...props}
+    >
+      {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
+      {children && <span className={styles.content}>{children}</span>}
+      {endIcon && <span className={styles.endIcon}>{endIcon}</span>}
+    </button>
+  );
+};
+
+export default Button;
+
+

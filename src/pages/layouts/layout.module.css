@@ -1,0 +1,34 @@
+:root {
+  --main-bg: var(--bg-secondary);
+  --main-text: var(--text-primary);
+  --main-padding: var(--spacing-6);
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100dvh;
+  column-gap: 15px;
+}
+.main {
+  flex: 1 1 auto;
+  padding: 15px;
+}
+.colorPicker {
+  background-color: var(--bg);
+  padding: 0px 15px;
+  border-right: 1px solid var(--border);
+  max-width: 340px; 
+  /* ? динамический размер? */
+  position: sticky;
+    height: 100dvh;
+    display: block;
+    top: 0;
+    z-index: 10;
+}
+.mainblock {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  column-gap: 15px;
+  padding: 0 15px;
+}

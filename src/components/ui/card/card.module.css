@@ -1,0 +1,36 @@
+:root {
+   --card-bg: var(--color-primary-light);
+   --card-text: var(--text-primary);
+   --card-border: var(--border-primary);
+   --card-shadow: var(--shadow-md);
+   --card-hover-shadow: var(--shadow-lg);
+   --card-hover-border: var(--border-hover);
+}
+.card {
+background-color: var(--bg);
+border-radius: 5px;
+}
+.title {
+
+}
+.image {
+  
+
+}
+.chapters {
+
+}
+.hiddendiv {
+  display: none;
+}
+.imageHidden {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+}
+.ganre {
+
+}
+.description {
+
+}

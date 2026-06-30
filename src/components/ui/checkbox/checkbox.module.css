@@ -1,0 +1,68 @@
+:root {
+  --input-font: var(--font-family-base);
+  --input-radius: var(--radius-md);
+  --input-border: var(--border-primary);
+  --input-shadow: var(--shadow-sm);
+
+   --input-bg: var(--color-white);
+   --input-text: var(--text-primary);
+   --input-border: var(--border-primary);
+   --input-placeholder: var(--text-muted);
+   --input-focus-border: var(--border-focus);
+   --input-focus-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+   --input-disabled-bg: var(--bg-secondary);
+   --input-error-border: var(--color-danger);
+   --input-error-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+
+}
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  background: white;
+}
+
+.input:focus {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.wrapper:focus-within {
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+/* Иконка */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+/* Отступы если есть иконка */
+.left {
+  margin-right: 8px;
+}
+
+.right {
+  margin-left: 8px;
+}
