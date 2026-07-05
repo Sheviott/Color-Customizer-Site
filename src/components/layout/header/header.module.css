@@ -1,6 +1,6 @@
 :root {
   --header-bg: var(--bg-primary);
-  --header-text: var(--text-primary);
+  --header-text: var(--text);
   --header-border: var(--border-primary);
   --header-shadow: var(--shadow-sm);
   --header-height: 64px;

@@ -1,10 +1,8 @@
 :root {
-  --card-bg: var(--color-primary-light);
-  --card-text: var(--text-primary);
-  --card-border: var(--border-primary);
-  --card-shadow: var(--shadow-md);
-  --card-hover-shadow: var(--shadow-lg);
-  --card-hover-border: var(--border-hover);
+  --card-bg: var(--color-primary);
+  --card-text: var(--text);
+  --card-border: var(--border);
+  --card-shadow: var(--shadow);
 }
 .card {
   background-color: var(--bg);

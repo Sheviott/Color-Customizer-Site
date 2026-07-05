@@ -7,6 +7,7 @@ type ButtonVariant =
   | "secondary"
   | "outline"
   | "ghost"
+  | "link"
   | "danger"
   | "dot"
   | "tab"
@@ -17,6 +18,7 @@ type ButtonType = {
   endIcon?: ReactNode;
   children?: React.ReactNode;
   fullWidth?: boolean;
+  disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
