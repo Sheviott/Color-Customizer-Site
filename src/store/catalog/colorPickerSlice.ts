@@ -334,8 +334,9 @@ export const colorPickerSlice = createSlice({
       const preset = state.colorsPresets.find(
         (item) => item.id === action.payload
       );
-      if (!preset) return;
+      console.log(action.payload)
 
+      if (!preset) return;
       state.items = preset.design;
     },
 
